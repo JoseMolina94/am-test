@@ -1,7 +1,11 @@
 'use client'
-import { CharacterListData } from "@/types/Characters";
+
 import { useEffect, useState } from "react";
-import { getCharacters } from "rickmortyapi";
+import CharacterCard from "./components/CharacterCard";
+import { CharacterListData } from "@/types/Characters";
+import { Character, getCharacters } from "rickmortyapi";
+
+import styles from './page.module.css'
 
 export default function Home() {
   const [charactersListData, setCharactersListData] = useState<CharacterListData>()
@@ -19,10 +23,16 @@ export default function Home() {
     getCharactersList()
   }, [])
 
-  console.log('LIST', charactersListData)
+  console.log("HHHH", charactersListData?.results)
   return (
     <div>
-
+      <div className={styles.charactersList}>
+        {
+          charactersListData?.results.map((character: Character, index: number) => (
+            <CharacterCard key={index} {...character} />
+          ))
+        }
+      </div>
     </div>
   );
 }
