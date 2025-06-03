@@ -29,7 +29,7 @@ export default function Home() {
     <div className={styles.characterSectionContainer}>
 
       <div className={styles.characterDetailsSection}>
-        <CharacterDetails {...charactersListData?.results[0] as Character} />
+        <CharacterDetails {...charactersListData?.results[3] as Character} />
       </div>
 
       <div className={styles.charactersList}>
