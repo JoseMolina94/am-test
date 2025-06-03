@@ -5,4 +5,14 @@
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+  overflow-y: auto;
+}
+
+.characterSectionContainer {
+  display: grid;
+  grid-template-columns: 0.75fr 1fr;
+}
+
+.characterDetailsSection {
+  width: 100%;
 }

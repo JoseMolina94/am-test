@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import CharacterCard from "./components/CharacterCard";
+import CharacterDetails from "./components/CharacterDetails";
 import { CharacterListData } from "@/types/Characters";
 import { Character, getCharacters } from "rickmortyapi";
 
@@ -25,7 +26,12 @@ export default function Home() {
 
   console.log("HHHH", charactersListData?.results)
   return (
-    <div>
+    <div className={styles.characterSectionContainer}>
+
+      <div className={styles.characterDetailsSection}>
+        <CharacterDetails {...charactersListData?.results[0] as Character} />
+      </div>
+
       <div className={styles.charactersList}>
         {
           charactersListData?.results.map((character: Character, index: number) => (
@@ -33,6 +39,7 @@ export default function Home() {
           ))
         }
       </div>
+
     </div>
   );
 }
