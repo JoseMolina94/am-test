@@ -25,6 +25,10 @@
   padding: 2rem 0;
 }
 
+.characterDetailsMobileSection {
+  display: none;
+}
+
 
 /* Break points */
 
@@ -40,10 +44,15 @@
 
   .characterSectionContainer {
     display: flex;
+    flex-direction: column;
     height: 100%;
   }
 
   .characterFilterContainer {
     padding: 1rem 0;
+  }
+
+  .characterDetailsMobileSection {
+    display: block;
   }
 }

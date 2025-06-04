@@ -1,0 +1,67 @@
+.characterDetailsMobileContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.characterPortait {
+  width: 16rem;
+  height: 16rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.characterPortait .statusContainer {
+  scale: 0.75;
+  position: absolute;
+  top: 0.5rem;
+}
+
+.characterPortait .detailsSection {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.detailsSection .infoContainer {
+  padding: 2px 0.5rem;
+  font-size: 10px;
+  color: white;
+}
+
+.infoContainer .characterInfoContainer {
+  display: flex; 
+  width: 100%;
+  justify-content: center;
+  margin-top: 0.5rem;
+  gap: 0.5rem;
+}
+
+.infoContainer .characterInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.characterName {
+  color: #7cde0c;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.characterTitleLabel {
+  color: #7cde0c;
+  font-size: 12px;
+}
+
+.characterInfo span {
+  text-align: center;
+}
+

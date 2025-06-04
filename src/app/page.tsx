@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import CharactersList from "@/components/CharactersList";
 import CharacterDetails from "../components/CharacterDetails";
+import CharacterDetailsMobile from "@/components/CharacterDetailsMobile";
 import CharacterFilter from "@/components/CharacterFilter";
 import { useCharacterStore } from "@/store/characterStore";
 import { CharacterListData } from "@/types/Characters";
@@ -52,6 +53,10 @@ export default function Home() {
           />
         </div>
         
+      </div>
+
+      <div className={styles.characterDetailsMobileSection}>
+        <CharacterDetailsMobile {...selectedCharacter as Character} />
       </div>
 
     </div>
