@@ -1,8 +1,8 @@
 'use client'
 
 import { useEffect, useState } from "react";
-import CharacterCard from "./components/CharacterCard";
-import CharacterDetails from "./components/CharacterDetails";
+import CharacterCard from "../components/CharacterCard";
+import CharacterDetails from "../components/CharacterDetails";
 import { CharacterListData } from "@/types/Characters";
 import { Character, getCharacters } from "rickmortyapi";
 
