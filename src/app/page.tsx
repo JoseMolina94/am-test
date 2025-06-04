@@ -10,7 +10,6 @@ import { Character, getCharacters } from "rickmortyapi";
 import styles from './page.module.css'
 import { useCharacterStore } from "@/store/characterStore";
 
-
 export default function Home() {
   const [charactersListData, setCharactersListData] = useState<CharacterListData>()
   const { setSelectedCharacter, selectedCharacter } = useCharacterStore()

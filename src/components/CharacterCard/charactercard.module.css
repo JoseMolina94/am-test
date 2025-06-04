@@ -13,6 +13,10 @@
   cursor: pointer;
 }
 
+.characterCard:hover {
+  background-color: #666666;
+}
+
 .characterCard .likeBtn {
   display: flex;
   gap: 5px;
