@@ -24,6 +24,7 @@ export default function AppLayout ( { children } : AppLayoutProps ) {
               alt="app-logo" 
               width={200} 
               height={100} 
+              className={styles.logo}
             />
           </div>
 

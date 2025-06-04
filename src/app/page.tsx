@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 import CharactersList from "@/components/CharactersList";
 import CharacterDetails from "../components/CharacterDetails";
 import CharacterFilter from "@/components/CharacterFilter";
+import { useCharacterStore } from "@/store/characterStore";
 import { CharacterListData } from "@/types/Characters";
 import { Character, getCharacters } from "rickmortyapi";
 
 import styles from './page.module.css'
-import { useCharacterStore } from "@/store/characterStore";
 
 export default function Home() {
   const [charactersListData, setCharactersListData] = useState<CharacterListData>()
@@ -34,7 +34,6 @@ export default function Home() {
     setSelectedCharacter(charactersListData?.results[0] as Character)
   }, [charactersListData])
 
-  console.log("HHHH", charactersListData?.results)
   return (
     <div className={styles.characterSectionContainer}>
 

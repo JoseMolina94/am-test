@@ -32,3 +32,19 @@
 .selected {
   border-color: #76DD00;
 }
+
+/* Break Points */
+
+@media (max-width: 1439px) {
+  .characterCard {
+    height: 170px;
+    width: 140px;
+    min-width: 140px;
+    padding: 0.25rem;
+  }
+
+  .characterImage {
+    width: 100px;
+    height: 100px;
+  }
+}

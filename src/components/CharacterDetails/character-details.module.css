@@ -53,3 +53,17 @@
   top: 3rem;
   left: 2rem;
 }
+
+/* Break Points */
+
+@media (max-width: 1439px) {
+  .detailsSection .infoContainer {
+    padding: 1rem 1.5rem;
+  }
+
+  .infoContainer .characterInfoContainer {
+    padding: 0;
+    gap: 1rem;
+    justify-content: flex-start;
+  }
+}

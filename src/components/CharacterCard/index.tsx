@@ -23,6 +23,7 @@ export default function CharacterCard (props: Character) {
         alt={name}
         width={145}
         height={145}
+        className={styles.characterImage}
       />
 
       <button className={styles.likeBtn} >

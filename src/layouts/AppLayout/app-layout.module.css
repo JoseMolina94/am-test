@@ -39,3 +39,61 @@
   gap: 1rem;
   padding: 0 17%;
 }
+
+.logo {
+  max-width: 320px;
+  max-height: auto;
+}
+
+/* Break Points */
+
+@media (max-width: 1599px) {
+  .appContainer {
+    flex: 1;
+  }
+
+  .charactersDecoration {
+    bottom: 4rem;
+    left: -4rem;
+  }
+
+  .layout {
+    padding: 0 10%;
+  }
+  
+}
+
+@media (max-width: 1023px) {
+  .logoContainer {
+    justify-content: center;
+  }
+
+  .charactersDecoration {
+    display: none;
+  }
+
+  .layout {
+    padding: 0.5rem;
+  }
+
+  .appContainer {
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  .logo {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .layout {
+    padding: 0;
+  }
+
+  .logo {
+    width: 100%;
+    height: auto;
+  }
+}
