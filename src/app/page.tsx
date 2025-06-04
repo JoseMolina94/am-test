@@ -7,13 +7,15 @@ import { CharacterListData } from "@/types/Characters";
 import { Character, getCharacters } from "rickmortyapi";
 
 import styles from './page.module.css'
+import { useCharacterStore } from "@/store/characterStore";
 
 export default function Home() {
   const [charactersListData, setCharactersListData] = useState<CharacterListData>()
+  const { setSelectedCharacter, selectedCharacter } = useCharacterStore()
   
   const getCharactersList = async () => {
     const response = await getCharacters()
-
+    
     setCharactersListData({
       results: response.data.results || [],
       info: response.data.info 
@@ -24,12 +26,16 @@ export default function Home() {
     getCharactersList()
   }, [])
 
+  useEffect(() => {
+    setSelectedCharacter(charactersListData?.results[0] as Character)
+  }, [charactersListData])
+
   console.log("HHHH", charactersListData?.results)
   return (
     <div className={styles.characterSectionContainer}>
 
       <div className={styles.characterDetailsSection}>
-        <CharacterDetails {...charactersListData?.results[3] as Character} />
+        <CharacterDetails {...selectedCharacter as Character} />
       </div>
 
       <div className={styles.charactersList}>
