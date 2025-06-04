@@ -1,6 +1,6 @@
 .charactersList {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -10,7 +10,8 @@
 
 .characterSectionContainer {
   display: grid;
-  grid-template-columns: 0.75fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100%;
 }
 
 .characterDetailsSection {
