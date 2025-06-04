@@ -1,13 +1,14 @@
 'use client'
 
 import { useEffect, useState } from "react";
-import CharacterCard from "../components/CharacterCard";
+import CharactersList from "@/components/CharactersList";
 import CharacterDetails from "../components/CharacterDetails";
 import { CharacterListData } from "@/types/Characters";
 import { Character, getCharacters } from "rickmortyapi";
 
 import styles from './page.module.css'
 import { useCharacterStore } from "@/store/characterStore";
+
 
 export default function Home() {
   const [charactersListData, setCharactersListData] = useState<CharacterListData>()
@@ -38,12 +39,14 @@ export default function Home() {
         <CharacterDetails {...selectedCharacter as Character} />
       </div>
 
-      <div className={styles.charactersList}>
-        {
-          charactersListData?.results.map((character: Character, index: number) => (
-            <CharacterCard key={index} {...character} />
-          ))
-        }
+      <div className={styles.charactersListSectionContainer} >
+
+        <div className={styles.charactersListContainer}>
+          <CharactersList 
+            list={charactersListData?.results || []} 
+          />
+        </div>
+        
       </div>
 
     </div>

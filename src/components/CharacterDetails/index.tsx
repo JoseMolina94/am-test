@@ -1,11 +1,12 @@
 'use client'
 
 import { Character } from "rickmortyapi";
+import StatusTag from "../StatusTag";
 
 import styles from './character-details.module.css'
 
 export default function CharacterDetails (props: Character) {
-  const { image, name, species, origin, location, gender, episode } = props
+  const { image, name, species, origin, location, gender, episode, status } = props
 
   return (
     <div
@@ -14,6 +15,11 @@ export default function CharacterDetails (props: Character) {
         backgroundImage: `url("${image}")`,
       }}
     >
+      <div className={styles.statusContainer}>
+        <StatusTag status={status} />
+      </div>
+      
+      
       <div className={styles.detailsSection}>
         <div className={styles.infoContainer} >
           <p className={styles.characterName}> 

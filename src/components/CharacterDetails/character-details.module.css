@@ -25,11 +25,16 @@
   align-items: center;
 }
 
+.characterInfo span {
+  text-align: center;
+}
+
 .infoContainer .characterInfoContainer {
   display: flex; 
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 3rem;
+  gap: 3rem;
 }
 
 .characterTitleLabel {
@@ -41,4 +46,10 @@
   color: #7cde0c;
   font-size: 24px;
   margin-bottom: 5px;
+}
+
+.statusContainer {
+  position: absolute;
+  top: 3rem;
+  left: 2rem;
 }

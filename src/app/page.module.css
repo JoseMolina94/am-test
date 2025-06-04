@@ -1,11 +1,12 @@
-.charactersList {
+.charactersListSectionContainer {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  overflow-y: auto;
+  overflow: hidden;
+}
+
+.charactersListContainer {
+  padding: 50px 30px;
+  height: 675px;
 }
 
 .characterSectionContainer {
