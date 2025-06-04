@@ -1,0 +1,29 @@
+.characterFilter {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  border: 1px solid #7cde0c;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 0 5px;
+}
+
+.characterFilter input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;  
+  color: green;
+  padding: 1rem 0;
+}
+
+.characterFilter input::placeholder {
+  color: green;
+}
+
+.characterFilter input:focus  {
+  border: none;
+  outline: none;
+  box-shadow: none;  
+  color: green;
+}

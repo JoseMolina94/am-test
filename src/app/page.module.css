@@ -5,8 +5,8 @@
 }
 
 .charactersListContainer {
-  padding: 50px 30px;
-  height: 675px;
+  padding: 10px 30px;
+  height: 520px;
 }
 
 .characterSectionContainer {
@@ -17,4 +17,10 @@
 
 .characterDetailsSection {
   width: 100%;
+}
+
+.characterFilterContainer {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
 }
