@@ -1,0 +1,16 @@
+{
+  "favorites": [
+    {
+      "id": "2",
+      "name": "Morty Smith"
+    },
+    {
+      "id": "3",
+      "name": "Summer Smith"
+    },
+    {
+      "id": "5",
+      "name": "Jerry Smith"
+    }
+  ]
+}

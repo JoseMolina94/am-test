@@ -1,4 +1,4 @@
-import { Character } from "rickmortyapi"
+import { Character as OriginalCharacter } from "rickmortyapi"
 
 export interface CharacterListData {
   info?: {
@@ -7,5 +7,14 @@ export interface CharacterListData {
     count: number
     pages: number
   }
-  results: Character[]
+  results: OriginalCharacter[]
+}
+
+export interface FavoriteCharacter {
+  id: string
+  name: string
+}
+
+export interface Character extends OriginalCharacter {
+  isFavorite: boolean
 }

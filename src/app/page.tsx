@@ -6,16 +6,24 @@ import CharacterDetails from "../components/CharacterDetails";
 import CharacterDetailsMobile from "@/components/CharacterDetailsMobile";
 import CharacterFilter from "@/components/CharacterFilter";
 import { useCharacterStore } from "@/store/characterStore";
-import { CharacterListData } from "@/types/Characters";
+import { CharacterListData, FavoriteCharacter } from "@/types/Characters";
 import { Character, getCharacters } from "rickmortyapi";
 
 import styles from './page.module.css'
 
 export default function Home() {
   const [charactersListData, setCharactersListData] = useState<CharacterListData>()
+  const [favoriteCharactersList, setFavoriteCharactersList] = useState<FavoriteCharacter[]>([])
   const { setSelectedCharacter, selectedCharacter } = useCharacterStore()
   const [filterValue, setFilterValue] = useState<string>('')
-  
+
+  const joinCharactersData = () => {
+    return (charactersListData?.results || []).map((character: Character) => ({
+      ...character,
+      isFavorite: !!favoriteCharactersList.find(fav => fav.id === `${character.id}`)
+    }))
+  }
+
   const getCharactersList = async (filters: { name: string }) => {
     const response = await getCharacters(filters)
     
@@ -25,7 +33,17 @@ export default function Home() {
     })
   }
 
+  const getFavoriteCharacters = async () => {
+    try {
+      const response = await fetch('/api/favorite-characters').then(data => data.json())
+      setFavoriteCharactersList(response || [])
+    } catch(e) {
+      console.error(e)
+    }
+  }
+
   useEffect(() => {
+    getFavoriteCharacters()
     getCharactersList({
       name: filterValue
     })
@@ -49,7 +67,8 @@ export default function Home() {
         
         <div className={styles.charactersListContainer}>
           <CharactersList 
-            list={charactersListData?.results || []} 
+            list={joinCharactersData() || []}
+            refetch={getFavoriteCharacters}
           />
         </div>
         

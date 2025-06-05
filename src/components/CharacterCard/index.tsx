@@ -1,12 +1,21 @@
-import { Character } from "rickmortyapi";
+import { Character } from "@/types/Characters";
 import { useCharacterStore } from "@/store/characterStore";
 import IconHearth from "../icons/IconHearth";
 import Image from "next/image";
 
 import styles from './charactercard.module.css'
 
-export default function CharacterCard (props: Character) {
-  const { name, image, id } = props
+type CharacterCardProps = {
+  character: Character
+  likeOnClick?: () => void
+}
+
+export default function CharacterCard (props: CharacterCardProps) {
+  const { 
+    character, 
+    likeOnClick = () => {} 
+  } = props
+  const { name, image, id, isFavorite } = character
   const { setSelectedCharacter, selectedCharacter } = useCharacterStore();
 
   const firstName = name.split(" ")[0].toLocaleUpperCase()
@@ -14,7 +23,7 @@ export default function CharacterCard (props: Character) {
   return (
     <div 
       className={`${styles.characterCard} ${(selectedCharacter?.id === id) && styles.selected}`}
-      onClick={() => setSelectedCharacter(props)}
+      onClick={() => setSelectedCharacter(character)}
     >
       {firstName}
 
@@ -26,8 +35,13 @@ export default function CharacterCard (props: Character) {
         className={styles.characterImage}
       />
 
-      <button className={styles.likeBtn} >
-        <IconHearth /> <span>Like</span>
+      <button className={styles.likeBtn} onClick={() => likeOnClick && likeOnClick()} >
+        <IconHearth 
+          color={!isFavorite ? "white" : "red"} 
+        /> 
+        <span>
+          Like
+        </span>
       </button>
     </div>
   )
