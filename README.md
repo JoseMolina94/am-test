@@ -23,7 +23,7 @@ El proyecto correra en el puerto 3000.
 ## ¿Qué me gustó del proyecto?:
 Me gustó especialmente la temática visual de Rick and Morty. Fue refrescante trabajar en una prueba más enfocada en la interfaz y experiencia del usuario, en lugar de una típica aplicación de oficina. A nivel de diseño, representó un reto interesante y entretenido.
 
-## Que hubiera mejorado si hubiera tenido mas tiempo?:
+## ¿Que hubiera mejorado si hubiera tenido mas tiempo?:
 Un factor que hubiera mejorado en el proyecto seria ajustar mejor el responsive del proyecto, hubiera hecho que el personaje seleccionado en la version mobile cambiara usando las flechas a los lados de la imagen y el scroll se reposicionara segun la seleccion
 
 Hubiera agregado tambien paginacion a la lista de personajes, y las pruebas tecnicas que planeaba realizarlas con la libreria de "Jest" pero tuve problemas en la instalación y ya no me alcanzaba el tiempo.
@@ -37,4 +37,4 @@ La solución fue convertir el ID a string al momento de guardar un personaje com
 Al momento de este desarrollo, use el Figma proporcionado para la prueba, pero no tuve el acceso a los recursos visuales (por ello no son iguales), y los estilos de los componentes tambien me costo mucho lograrlas de manera precisa.
 
 ## Jose Molina
-### Muchas Gracias por leer.
+## Muchas Gracias por leer.
