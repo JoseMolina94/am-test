@@ -56,3 +56,9 @@
     display: block;
   }
 }
+
+@media (max-height: 800px) {
+  .charactersListContainer {
+    height: 350px;
+  }
+}

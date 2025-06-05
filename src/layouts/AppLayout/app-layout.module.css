@@ -14,6 +14,7 @@
   border-radius: 50px;
   overflow: hidden;
   height: 750px;
+  max-height: 80vh;
   position: relative;
   z-index: 1;
 }
@@ -48,9 +49,6 @@
 /* Break Points */
 
 @media (max-width: 1599px) {
-  .appContainer {
-    flex: 1;
-  }
 
   .charactersDecoration {
     bottom: 4rem;
@@ -60,7 +58,6 @@
   .layout {
     padding: 0 10%;
   }
-  
 }
 
 @media (max-width: 1023px) {
