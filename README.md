@@ -10,9 +10,15 @@ Este proyecto es una prueba técnica que consume la API pública de [Rick and Mo
 ## Instrucciones para correr el proyecto:
 
 Usa la siguiente secuencia de comandos:
-**npm install** : Para efectuar la instalación del proyecto y dependencias.
-**npm run server** : Json Server correra en el puerto 3001, 
-**npm run dev** : El proyecto correra en el puerto 3000
+
+Para efectuar la instalación del proyecto y dependencias.
+### `npm install`
+
+Json Server correra en el puerto 3001.
+### `npm run server`
+
+El proyecto correra en el puerto 3000.
+### `npm run dev`
 
 ## ¿Qué me gustó del proyecto?:
 Me gustó especialmente la temática visual de Rick and Morty. Fue refrescante trabajar en una prueba más enfocada en la interfaz y experiencia del usuario, en lugar de una típica aplicación de oficina. A nivel de diseño, representó un reto interesante y entretenido.
@@ -30,5 +36,5 @@ La solución fue convertir el ID a string al momento de guardar un personaje com
 # Notas importantes
 Al momento de este desarrollo, use el Figma proporcionado para la prueba, pero no tuve el acceso a los recursos visuales (por ello no son iguales), y los estilos de los componentes tambien me costo mucho lograrlas de manera precisa.
 
-### Jose Molina
-## Muchas Gracias por leer.
+## Jose Molina
+### Muchas Gracias por leer.
