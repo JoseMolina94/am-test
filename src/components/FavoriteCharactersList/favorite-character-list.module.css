@@ -1,0 +1,41 @@
+.tabContainer {
+  background-color: #635c5c;
+  color: white;
+  min-width: 15rem;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  padding: 0.75rem 2px;
+  cursor: pointer;
+}
+
+.favsLabel {
+  width: 100%;
+  text-align: center;
+}
+
+.favsLabel:hover {
+  color:#76DD00
+}
+
+.tabList {
+  display: flex;
+  gap: .25rem;
+  flex-direction: column;
+}
+
+.tabItem {
+  background-color: #9c9c9c;
+  color: white;
+  width: 100%;
+  padding: 0.25rem 0;
+}
+
+.tabItem span {
+  padding: 0.25rem 0.5rem;
+}

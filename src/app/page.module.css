@@ -29,6 +29,16 @@
   display: none;
 }
 
+.favsTabSection {
+  display: flex;
+  justify-content: center;
+}
+
+.favsTabMoblieSection {
+  display: none;
+  justify-content: center;
+}
+
 
 /* Break points */
 
@@ -54,6 +64,14 @@
 
   .characterDetailsMobileSection {
     display: block;
+  }
+
+  .favsTabSection {
+    display: none;
+  }
+
+  .favsTabMoblieSection {
+    display: flex;
   }
 }
 

@@ -10,6 +10,7 @@ import { CharacterListData, FavoriteCharacter } from "@/types/Characters";
 import { Character, getCharacters } from "rickmortyapi";
 
 import styles from './page.module.css'
+import FavoriteCharactersList from "@/components/FavoriteCharactersList";
 
 export default function Home() {
   const [charactersListData, setCharactersListData] = useState<CharacterListData>()
@@ -71,11 +72,19 @@ export default function Home() {
             refetch={getFavoriteCharacters}
           />
         </div>
+
+        <div className={styles.favsTabSection} >
+          <FavoriteCharactersList favorites={favoriteCharactersList || []} />
+        </div>
         
       </div>
 
       <div className={styles.characterDetailsMobileSection}>
         <CharacterDetailsMobile {...selectedCharacter as Character} />
+
+        <div className={styles.favsTabMoblieSection} >
+          <FavoriteCharactersList favorites={favoriteCharactersList || []} />
+        </div>
       </div>
 
     </div>
